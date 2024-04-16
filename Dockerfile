@@ -1,2 +1,4 @@
-FROM jenkins/jenkins:jdk17
-
+FROM jenkins/jenkins:latest
+USER root
+RUN apt-get update && apt-get install -y docker.io
+USER jenkins
